@@ -1,0 +1,47 @@
+{
+  "name": "variable-printer-js",
+  "displayName": "Variable printer js",
+  "description": "automatically prints cpp variable with std::cout",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "variable-printer-js.printer",
+      "title": "Print variables"
+    },
+    {
+      "command": "variable-printer-js.keywords",
+      "title": "Register keywords"
+    }
+  ],
+    "keybindings":[{
+      "command": "variable-printer-js.printer",
+      "key": "Ctrl+Alt+P",
+      "when": "editorTextFocus"
+    },{
+      "command": "variable-printer-js.keywords",
+      "key":"Ctrl+Alt+K"
+    }
+  ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "@types/mocha": "^10.0.8",
+    "@types/node": "20.x",
+    "eslint": "^9.11.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}

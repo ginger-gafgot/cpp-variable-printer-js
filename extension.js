@@ -17,6 +17,7 @@ function getSelectionText() {
 	}
 	return "";
 }
+
 function iostreamCheck() {
 	const editor = vscode.window.activeTextEditor;
 	const selection = editor.selection
@@ -199,7 +200,7 @@ function getVariables(keywords, string, functionIncluded = true, arraysIncluded 
 	return output;
 
 }
- function printVariables (keywords,string) {
+function printVariables (keywords,string) {
 
 	
 	let output = "";

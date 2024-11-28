@@ -17,8 +17,12 @@
       "title": "Print variables"
     },
     {
-      "command": "variable-printer-js.keywords",
+      "command": "variable-printer-js.keywordsRegister",
       "title": "Register keywords"
+    },
+    {
+      "command": "variable-printer-js.keywordsDisregister",
+      "title": "Disregister keywords"
     }
   ],
     "keybindings":[{
@@ -26,8 +30,13 @@
       "key": "Ctrl+Alt+P",
       "when": "editorTextFocus"
     },{
-      "command": "variable-printer-js.keywords",
-      "key":"Ctrl+Alt+K"
+      "command": "variable-printer-js.keywordsRegister",
+      "key":"Ctrl+Alt+K",
+      "when": "editorTextFocus"
+    },{
+      "command": "variable-printer-js.keywordsDisregister",
+      "key":"Shift+Alt+K",
+      "when": "editorTextFocus"
     }
   ]
   },
